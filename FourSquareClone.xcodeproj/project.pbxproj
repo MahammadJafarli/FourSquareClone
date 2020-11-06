@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		868F6066B48581E0AE04FB35 /* Pods_FourSquareClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3DB0BBF7F7F26B860EB0465 /* Pods_FourSquareClone.framework */; };
 		C828F66A2554A309004FADD6 /* PlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C828F6692554A309004FADD6 /* PlacesViewController.swift */; };
+		C828F66C2554ABFD004FADD6 /* AddPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C828F66B2554ABFD004FADD6 /* AddPlaceViewController.swift */; };
+		C893048B2555981700E99DDA /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C893048A2555981700E99DDA /* MapViewController.swift */; };
+		C893048D25559BCE00E99DDA /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C893048C25559BCE00E99DDA /* DetailsViewController.swift */; };
 		C8F22994255350FB00128D43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F22993255350FB00128D43 /* AppDelegate.swift */; };
 		C8F22996255350FB00128D43 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F22995255350FB00128D43 /* SceneDelegate.swift */; };
 		C8F22998255350FB00128D43 /* SignUpVeiwController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F22997255350FB00128D43 /* SignUpVeiwController.swift */; };
@@ -20,6 +23,9 @@
 /* Begin PBXFileReference section */
 		4D15C99B601F98FEBF3AA87F /* Pods-FourSquareClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FourSquareClone.debug.xcconfig"; path = "Target Support Files/Pods-FourSquareClone/Pods-FourSquareClone.debug.xcconfig"; sourceTree = "<group>"; };
 		C828F6692554A309004FADD6 /* PlacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesViewController.swift; sourceTree = "<group>"; };
+		C828F66B2554ABFD004FADD6 /* AddPlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlaceViewController.swift; sourceTree = "<group>"; };
+		C893048A2555981700E99DDA /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		C893048C25559BCE00E99DDA /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		C8F22990255350FB00128D43 /* FourSquareClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FourSquareClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8F22993255350FB00128D43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C8F22995255350FB00128D43 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +92,9 @@
 				C8F22995255350FB00128D43 /* SceneDelegate.swift */,
 				C8F22997255350FB00128D43 /* SignUpVeiwController.swift */,
 				C828F6692554A309004FADD6 /* PlacesViewController.swift */,
+				C828F66B2554ABFD004FADD6 /* AddPlaceViewController.swift */,
+				C893048A2555981700E99DDA /* MapViewController.swift */,
+				C893048C25559BCE00E99DDA /* DetailsViewController.swift */,
 				C8F22999255350FB00128D43 /* Main.storyboard */,
 				C8F2299C255350FD00128D43 /* Assets.xcassets */,
 				C8F2299E255350FD00128D43 /* LaunchScreen.storyboard */,
@@ -209,8 +218,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C828F66C2554ABFD004FADD6 /* AddPlaceViewController.swift in Sources */,
+				C893048B2555981700E99DDA /* MapViewController.swift in Sources */,
 				C828F66A2554A309004FADD6 /* PlacesViewController.swift in Sources */,
 				C8F22998255350FB00128D43 /* SignUpVeiwController.swift in Sources */,
+				C893048D25559BCE00E99DDA /* DetailsViewController.swift in Sources */,
 				C8F22994255350FB00128D43 /* AppDelegate.swift in Sources */,
 				C8F22996255350FB00128D43 /* SceneDelegate.swift in Sources */,
 			);

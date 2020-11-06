@@ -21,7 +21,7 @@ class PlacesViewController: UIViewController {
     }
 
     @objc func addButton() {
-        performSegue(withIdentifier: "toPlacesVC", sender: nil)
+        performSegue(withIdentifier: "toAddPlaceVC", sender: nil)
     }
     
     @objc func logout() {
