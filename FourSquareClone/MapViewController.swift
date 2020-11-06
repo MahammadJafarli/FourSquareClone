@@ -8,12 +8,11 @@
 
 import UIKit
 import MapKit
+import Parse
 
 class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     @IBOutlet weak var mapView: MKMapView!
     var locationManager = CLLocationManager()
-    var choosenLatitude = ""
-    var choosenLongitude = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,8 +45,8 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             
             self.mapView.addAnnotation(annotation)
             
-            self.choosenLatitude = String(cordinates.latitude)
-            self.choosenLongitude = String(cordinates.longitude)
+            PlaceModel.sharedInstance.latitude = String(cordinates.latitude)
+            PlaceModel.sharedInstance.longitude = String(cordinates.longitude)
             
         }
     }
@@ -64,7 +63,29 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     }
 
     @objc func saveData() {
+        let placeModel = PlaceModel.sharedInstance
         
+        let object = PFObject(className: "Places")
+        object["name"] = placeModel.placeName
+        object["type"] = placeModel.placeType
+        object["description"] = placeModel.placeDesc
+        object["latitude"] = placeModel.latitude
+        object["longitude"] = placeModel.longitude
+        
+        if let imageData = placeModel.placeImage.jpegData(compressionQuality: 0.5) {
+            object["image"] = PFFileObject(name: "image.jpg", data: imageData)
+        }
+        
+        object.saveInBackground { (success, error) in
+            if error != nil {
+                let alert = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: UIAlertController.Style.alert)
+                let okButton = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil)
+                alert.addAction(okButton)
+                self.present(alert, animated: true, completion: nil)
+            }else {
+                self.performSegue(withIdentifier: "toPlacesList", sender: nil)
+            }
+        }
     }
 
 }
